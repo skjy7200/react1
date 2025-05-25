@@ -1,12 +1,19 @@
 import React from "react";
-import QuoteBox from "./components/QuoteBox";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Quote from "./pages/Quote";         // 첫 페이지?
+import QuotePage from "./pages/QuotePage"; // 두번쨰 페이지
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <QuoteBox />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Quote />} />
+          <Route path="/quote" element={<QuotePage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
