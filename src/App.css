@@ -53,3 +53,27 @@
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* 명언 루프 애니메이션 */
+.scrolling-quote {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+}
+
+.scrolling-quote p {
+  display: inline-block;
+  font-size: 1.1rem;
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
