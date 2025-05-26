@@ -55,6 +55,14 @@
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+.button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e0f0ff;
+  border: 1px solid #b0d0f0;
+}
 
 /* 명언 루프 애니메이션 */
 .scrolling-quote {
