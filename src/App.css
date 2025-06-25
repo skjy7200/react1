@@ -6,94 +6,58 @@
   min-height: 100vh;
 }
 
-.search-box {
-  width: 100%;
-  max-width: 350px;
-  margin: 8px auto;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  display: block;
-}
-
-.card {
-  width: 100%;
-  max-width: 350px;
-  margin: 0 auto 20px auto;
-  padding: 16px;
-  border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.card h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.card p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #444;
-  margin-top: 2px;
-}
-
-/* ✅ 인기 과목 배너용 카드 */
-.card.popular {
-  background-color: #dbeeff;
+.track-box {
+  background-color: #e3f2fd;
   padding: 20px;
+  border-radius: 16px;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  min-height: 400px;
+  margin-bottom: 40px;
 }
 
+/* ✅ 버튼 크기 통일 */
+.track-button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 14px; /* ✅ 글자 크기 줄이기 */
+  cursor: pointer;
+  width: 140px;     /* ✅ 고정 너비 */
+  height: 75px;     /* ✅ 고정 높이 */
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-wrap: wrap;
+}
+
+.track-button:hover {
+  background-color: #357ae8;
+}
+
+
+/* 👇 기존 항목 삭제 또는 미사용: 추천 강좌/검색 관련 */
+.search-box,
+.search-wrapper,
+.search-icon-button,
+.recommended-courses,
+.course-card,
+.course-card h4,
+.course-card p,
+.course-meta,
+.card.popular,
 .card.popular .button {
-  margin-top: 200px;
-  width: 100%;
-  max-width: 100%;
+  display: none !important;
 }
 
-.recommended-courses {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  padding-left: 5px;
-}
-
-.course-card {
-  min-width: 160px;
-  max-width: 160px;
-  background-color: #fff;
-  padding: 12px;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-.course-card h4 {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.course-card p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.course-meta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  color: gray;
-  margin-top: 8px;
-}
-
+/* 공통 버튼 스타일 유지 (원한다면 삭제 가능) */
 .button {
   width: 100%;
   max-width: 350px;
@@ -110,32 +74,4 @@
 
 .button:hover {
   background-color: #3367d6;
-}
-
-.search-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 350px;
-  margin: 20px auto;
-}
-
-.search-box {
-  width: 100%;
-  padding: 10px 40px 10px 12px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-.search-icon-button {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  color: gray;
 }
