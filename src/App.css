@@ -1,5 +1,6 @@
 .App {
-  width: 390px;
+  max-width: 390px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   background-color: #f7f9fc;

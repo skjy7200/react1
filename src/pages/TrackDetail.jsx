@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import "../App.css";
 
 // 트랙별 과목 데이터 
@@ -43,6 +43,9 @@ const trackCourses = {
 function TrackDetail() {
   const { trackName } = useParams();
   const navigate = useNavigate();
+  const { state } = useLocation();
+  const studentInfo = state?.studentInfo || {};
+
   const courses = trackCourses[trackName] || [];
   const [selected, setSelected] = useState([]);
 
@@ -56,13 +59,16 @@ function TrackDetail() {
 
   const handleSubmit = () => {
     navigate(`/track/${trackName}/result`, {
-      state: { selectedCourses: selected }
+      state: {
+        selectedCourses: selected,
+        studentInfo
+      }
     });
   };
 
   return (
     <div className="App">
-      <h2 style={{ textAlign: "left", marginBottom: "16px" }}>{trackName} 과목 선택</h2>
+      <h2 style={{ textAlign: "left", marginBottom: "16px" }}>{trackName} 이수한 과목 선택</h2>
 
       {courses.map((course, i) => (
         <div className="card" key={i} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
